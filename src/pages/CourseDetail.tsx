@@ -192,11 +192,29 @@ export default function CourseDetail() {
               <h2 className="text-lg font-medium text-gray-900 mb-4">课程描述</h2>
               <p className="text-gray-600 mb-6">{course.description}</p>
               <h2 className="text-lg font-medium text-gray-900 mb-4">课程内容</h2>
-              <div className="bg-gray-50 p-4 rounded-md">
-                <p className="text-gray-600">{course.content}</p>
-                <div className="mt-6 text-yellow-500">
-                  <p>📝 内容正在补充中...</p>
+              <div className="bg-gray-50 p-6 rounded-md shadow-sm">
+                <div className="prose max-w-none">
+                  {course.content.split('\n').map((line, index) => {
+                    if (line.startsWith('## ')) {
+                      return <h2 key={index} className="text-xl font-bold text-blue-700 mt-8 mb-4">{line.replace('## ', '')}</h2>;
+                    } else if (line.startsWith('### ')) {
+                      return <h3 key={index} className="text-lg font-semibold text-gray-800 mt-6 mb-3">{line.replace('### ', '')}</h3>;
+                    } else if (line.startsWith('- ')) {
+                      return <p key={index} className="ml-4 mb-2"><span className="text-blue-500 mr-2">•</span>{line.replace('- ', '')}</p>;
+                    } else if (line.startsWith('  - ')) {
+                      return <p key={index} className="ml-8 mb-2"><span className="text-gray-500 mr-2">→</span>{line.replace('  - ', '')}</p>;
+                    } else if (line) {
+                      return <p key={index} className="mb-4">{line}</p>;
+                    } else {
+                      return <br key={index} />;
+                    }
+                  })}
                 </div>
+                {course.id !== 'data-analysis' && (
+                  <div className="mt-6 text-yellow-500">
+                    <p>📝 内容正在补充中...</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
