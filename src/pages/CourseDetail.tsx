@@ -6,16 +6,10 @@ interface Course {
   description: string;
   content: string;
   icon: string;
+  color: string;
 }
 
 const courses: Course[] = [
-  {
-    id: "python",
-    name: "Python基础",
-    description: "学习Python编程语言的基础知识，包括语法、数据类型、控制结构和函数等。",
-    content: "本课程将介绍Python的基本语法、数据结构、函数定义和调用、面向对象编程等内容。通过实践项目，掌握Python编程技能，为后续的数据分析课程打下基础。",
-    icon: "🐍"
-  },
   {
     id: "data-analysis",
     name: "数据分析技术",
@@ -109,14 +103,295 @@ const courses: Course[] = [
 3. 课后及时完成实验作业，巩固所学知识
 4. 多动手实践，尝试分析真实数据集
 5. 关注数据分析领域的最新发展和应用案例`,
-    icon: "📊"
+    icon: "📊",
+    color: "from-purple-600 to-pink-600"
   },
   {
-    id: "data-collection",
-    name: "数据采集与处理",
-    description: "学习如何从不同来源采集数据，并进行预处理和清洗。",
-    content: "本课程将介绍网络爬虫技术，使用Python库如Requests和BeautifulSoup进行数据采集，以及数据清洗、转换和集成的方法。通过实践项目，掌握数据采集和处理的完整流程。",
-    icon: "🕷️"
+    id: "ecommerce-data",
+    name: "电子商务数据",
+    description: "学习电子商务平台的数据分析方法，包括用户行为分析、销售数据分析等。",
+    content: `## 课程简介
+《电子商务数据》是商务数据分析与应用专业的专业课程，旨在培养学生运用数据分析技术解决电子商务领域问题的能力。本课程将系统介绍电子商务平台的数据类型、分析方法和应用场景，使学生能够熟练运用数据分析工具优化电商运营和决策。
+
+## 学习目标
+1. 掌握电子商务数据的类型和来源
+2. 理解电子商务数据分析的基本概念和方法
+3. 熟练使用数据分析工具分析电商数据
+4. 能够识别电商运营中的问题并提出优化方案
+5. 培养电商数据思维和决策分析能力
+6. 掌握电商数据分析报告的撰写方法
+
+## 课程大纲
+
+### 第一章：电子商务数据基础
+- 1.1 电子商务的概念和发展
+- 1.2 电商数据的类型和特点
+- 1.3 电商数据的采集和存储
+- 1.4 电商数据分析的重要性
+
+### 第二章：用户行为分析
+- 2.1 用户行为数据的类型
+- 2.2 用户行为分析的方法
+- 2.3 用户画像构建
+- 2.4 用户流失分析
+
+### 第三章：销售数据分析
+- 3.1 销售数据的类型和指标
+- 3.2 销售趋势分析
+- 3.3 产品销售分析
+- 3.4 促销效果分析
+
+### 第四章：市场营销分析
+- 4.1 流量分析
+- 4.2 转化率分析
+- 4.3 客单价分析
+- 4.4 营销渠道分析
+
+### 第五章：供应链与库存分析
+- 5.1 库存水平分析
+- 5.2 库存周转率分析
+- 5.3 缺货率分析
+- 5.4 供应链优化分析
+
+### 第六章：电商数据分析工具
+- 6.1 Python在电商数据分析中的应用
+- 6.2 Excel在电商数据分析中的应用
+- 6.3 电商平台自带分析工具
+- 6.4 第三方数据分析工具
+
+### 第七章：电商数据分析案例
+- 7.1 电商平台用户行为分析案例
+- 7.2 电商平台销售数据分析案例
+- 7.3 电商平台市场营销分析案例
+- 7.4 电商平台供应链分析案例
+
+## 先修课程
+- Python基础
+- 数据分析技术
+- 数据采集与处理
+
+## 学习资源
+- **教材**：《电子商务数据分析》（张铁柱著）
+- **参考书籍**：《电商数据分析实战》、《数据化管理》
+- **在线资源**：阿里研究院、京东研究院
+- **工具**：Python（Pandas、NumPy）、Excel、Tableau
+
+## 考核方式
+- 平时作业：20%
+- 实验报告：25%
+- 案例分析：25%
+- 期末考试：30%
+
+## 教学安排
+- 理论教学：每周2课时
+- 实验教学：每周2课时
+- 总学时：64课时
+
+## 学习建议
+1. 结合实际电商平台理解数据概念
+2. 多动手实践，使用真实电商数据集进行分析
+3. 关注电商领域的最新趋势和技术
+4. 参与小组讨论，分享分析思路和方法
+5. 培养系统性思维，从整体角度分析电商问题`,
+    icon: "💻",
+    color: "from-blue-600 to-cyan-400"
+  },
+  {
+    id: "financial-analysis",
+    name: "企业财务数据分析",
+    description: "学习企业财务数据的分析方法，包括财务报表分析、财务指标分析等。",
+    content: `## 课程简介
+《企业财务数据分析》是商务数据分析与应用专业的专业课程，旨在培养学生运用数据分析技术解决企业财务问题的能力。本课程将系统介绍企业财务数据的类型、分析方法和应用场景，使学生能够熟练运用数据分析工具分析企业财务状况和经营成果。
+
+## 学习目标
+1. 掌握企业财务数据的类型和来源
+2. 理解企业财务分析的基本概念和方法
+3. 熟练使用数据分析工具分析财务数据
+4. 能够识别企业财务中的问题并提出优化方案
+5. 培养财务数据思维和决策分析能力
+6. 掌握财务数据分析报告的撰写方法
+
+## 课程大纲
+
+### 第一章：财务数据分析基础
+- 1.1 财务数据的概念和类型
+- 1.2 财务报表的结构和内容
+- 1.3 财务数据分析的重要性
+- 1.4 财务数据分析的方法和工具
+
+### 第二章：资产负债表分析
+- 2.1 资产负债表的结构和内容
+- 2.2 资产分析
+- 2.3 负债分析
+- 2.4 所有者权益分析
+
+### 第三章：利润表分析
+- 3.1 利润表的结构和内容
+- 3.2 收入分析
+- 3.3 成本费用分析
+- 3.4 利润分析
+
+### 第四章：现金流量表分析
+- 4.1 现金流量表的结构和内容
+- 4.2 经营活动现金流量分析
+- 4.3 投资活动现金流量分析
+- 4.4 筹资活动现金流量分析
+
+### 第五章：财务指标分析
+- 5.1 盈利能力指标分析
+- 5.2 营运能力指标分析
+- 5.3 偿债能力指标分析
+- 5.4 发展能力指标分析
+
+### 第六章：财务预测分析
+- 6.1 销售预测
+- 6.2 成本预测
+- 6.3 利润预测
+- 6.4 现金流量预测
+
+### 第七章：财务风险分析
+- 7.1 财务风险的概念和类型
+- 7.2 财务风险识别方法
+- 7.3 财务风险评估模型
+- 7.4 财务风险预警系统
+
+### 第八章：财务数据分析案例
+- 8.1 制造业财务分析案例
+- 8.2 零售业财务分析案例
+- 8.3 服务业财务分析案例
+- 8.4 科技企业财务分析案例
+
+## 先修课程
+- Python基础
+- 数据分析技术
+- 基础会计
+
+## 学习资源
+- **教材**：《企业财务数据分析》（张新民著）
+- **参考书籍**：《财务分析》、《财务报表分析》
+- **在线资源**：东方财富网、同花顺
+- **工具**：Python（Pandas、NumPy）、Excel、Tableau
+
+## 考核方式
+- 平时作业：20%
+- 实验报告：25%
+- 案例分析：25%
+- 期末考试：30%
+
+## 教学安排
+- 理论教学：每周2课时
+- 实验教学：每周2课时
+- 总学时：64课时
+
+## 学习建议
+1. 结合实际企业财务报表理解分析方法
+2. 多动手实践，使用真实财务数据集进行分析
+3. 关注财务分析领域的最新趋势和技术
+4. 参与小组讨论，分享分析思路和方法
+5. 培养系统性思维，从整体角度分析财务问题`,
+    icon: "💰",
+    color: "from-green-500 to-emerald-300"
+  },
+  {
+    id: "statistics",
+    name: "应用统计实务",
+    description: "学习统计分析的基本方法和应用，包括描述性统计、推断性统计等。",
+    content: `## 课程简介
+《应用统计实务》是商务数据分析与应用专业的专业课程，旨在培养学生运用统计分析方法解决实际问题的能力。本课程将系统介绍统计分析的基本理论、方法和实践技能，使学生能够熟练运用统计工具进行数据收集、整理、分析和解释。
+
+## 学习目标
+1. 掌握统计分析的基本概念和方法
+2. 理解统计数据的收集和整理方法
+3. 熟练使用统计工具进行数据分析
+4. 能够运用统计方法解决实际商务问题
+5. 培养统计思维和数据分析能力
+6. 掌握统计分析报告的撰写方法
+
+## 课程大纲
+
+### 第一章：统计分析基础
+- 1.1 统计的概念和作用
+- 1.2 统计数据的类型
+- 1.3 统计数据的收集方法
+- 1.4 统计数据的整理方法
+
+### 第二章：描述性统计分析
+- 2.1 数据的集中趋势分析
+- 2.2 数据的离散程度分析
+- 2.3 数据的分布特征分析
+- 2.4 数据的图表展示
+
+### 第三章：概率与概率分布
+- 3.1 概率的基本概念
+- 3.2 概率的计算方法
+- 3.3 常见概率分布
+- 3.4 概率分布的应用
+
+### 第四章：参数估计
+- 4.1 抽样分布
+- 4.2 点估计
+- 4.3 区间估计
+- 4.4 样本量的确定
+
+### 第五章：假设检验
+- 5.1 假设检验的基本概念
+- 5.2 单个总体的假设检验
+- 5.3 两个总体的假设检验
+- 5.4 假设检验的应用
+
+### 第六章：方差分析
+- 6.1 方差分析的基本概念
+- 6.2 单因素方差分析
+- 6.3 双因素方差分析
+- 6.4 方差分析的应用
+
+### 第七章：相关与回归分析
+- 7.1 相关分析
+- 7.2 一元线性回归分析
+- 7.3 多元线性回归分析
+- 7.4 回归分析的应用
+
+### 第八章：时间序列分析
+- 8.1 时间序列的基本概念
+- 8.2 时间序列的描述性分析
+- 8.3 时间序列的预测方法
+- 8.4 时间序列分析的应用
+
+### 第九章：统计分析案例
+- 9.1 市场调研统计分析案例
+- 9.2 质量控制统计分析案例
+- 9.3 经济预测统计分析案例
+- 9.4 社会调查统计分析案例
+
+## 先修课程
+- Python基础
+- 数据分析技术
+
+## 学习资源
+- **教材**：《应用统计学》（贾俊平著）
+- **参考书籍**：《统计学》、《商务统计》
+- **在线资源**：国家统计局、统计年鉴
+- **工具**：Python（NumPy、SciPy）、Excel、SPSS
+
+## 考核方式
+- 平时作业：20%
+- 实验报告：25%
+- 案例分析：25%
+- 期末考试：30%
+
+## 教学安排
+- 理论教学：每周2课时
+- 实验教学：每周2课时
+- 总学时：64课时
+
+## 学习建议
+1. 理解统计概念的实际意义
+2. 多动手实践，使用真实数据集进行分析
+3. 关注统计分析领域的最新趋势和技术
+4. 参与小组讨论，分享分析思路和方法
+5. 培养统计思维，从数据中发现规律`,
+    icon: "📈",
+    color: "from-yellow-500 to-orange-400"
   },
   {
     id: "supply-chain",
@@ -223,14 +498,110 @@ const courses: Course[] = [
 3. 关注供应链管理领域的最新趋势和技术
 4. 参与小组讨论，分享分析思路和方法
 5. 培养系统性思维，从整体角度分析供应链问题`,
-    icon: "📦"
+    icon: "📦",
+    color: "from-red-600 to-pink-500"
   },
   {
     id: "database",
-    name: "数据库原理与应用",
+    name: "数据库技术与应用",
     description: "学习数据库的基本原理和SQL语言，以及数据库设计和管理。",
-    content: "本课程将介绍数据库的基本概念、关系型数据库模型、SQL语言、数据库设计和规范化等内容。通过实践操作，掌握数据库的查询、设计和管理技能。",
-    icon: "💾"
+    content: `## 课程简介
+《数据库技术与应用》是商务数据分析与应用专业的专业课程，旨在培养学生运用数据库技术管理和分析数据的能力。本课程将系统介绍数据库的基本理论、SQL语言、数据库设计和管理，使学生能够熟练运用数据库工具存储、管理和查询数据。
+
+## 学习目标
+1. 掌握数据库的基本概念和原理
+2. 理解关系型数据库的设计方法
+3. 熟练使用SQL语言进行数据操作
+4. 能够设计和管理数据库系统
+5. 培养数据库思维和数据管理能力
+6. 掌握数据库应用开发的基本方法
+
+## 课程大纲
+
+### 第一章：数据库基础
+- 1.1 数据库的概念和发展
+- 1.2 数据库系统的组成
+- 1.3 数据库管理系统的功能
+- 1.4 数据库应用场景
+
+### 第二章：关系型数据库模型
+- 2.1 关系模型的基本概念
+- 2.2 关系的性质
+- 2.3 关系代数
+- 2.4 关系演算
+
+### 第三章：SQL语言基础
+- 3.1 SQL语言的特点和功能
+- 3.2 数据定义语言（DDL）
+- 3.3 数据操纵语言（DML）
+- 3.4 数据查询语言（DQL）
+
+### 第四章：高级SQL查询
+- 4.1 连接查询
+- 4.2 子查询
+- 4.3 分组查询和聚合函数
+- 4.4 窗口函数
+
+### 第五章：数据库设计
+- 5.1 数据库设计的基本步骤
+- 5.2 需求分析
+- 5.3 概念结构设计
+- 5.4 逻辑结构设计
+- 5.5 物理结构设计
+
+### 第六章：数据库规范化
+- 6.1 函数依赖
+- 6.2 范式理论
+- 6.3 规范化方法
+- 6.4 反规范化
+
+### 第七章：数据库安全与管理
+- 7.1 数据库安全的概念和重要性
+- 7.2 数据库安全措施
+- 7.3 数据库备份与恢复
+- 7.4 数据库性能优化
+
+### 第八章：数据库应用开发
+- 8.1 数据库应用开发的基本流程
+- 8.2 数据库连接技术
+- 8.3 数据库应用实例
+- 8.4 现代数据库技术
+
+### 第九章：数据库分析案例
+- 9.1 企业数据库设计案例
+- 9.2 电商数据库设计案例
+- 9.3 物流数据库设计案例
+- 9.4 金融数据库设计案例
+
+## 先修课程
+- Python基础
+- 数据分析技术
+
+## 学习资源
+- **教材**：《数据库系统概论》（王珊著）
+- **参考书籍**：《SQL必知必会》、《数据库设计与实现》
+- **在线资源**：MySQL官方文档、PostgreSQL官方文档
+- **工具**：MySQL、PostgreSQL、SQL Server
+
+## 考核方式
+- 平时作业：20%
+- 实验报告：25%
+- 案例分析：25%
+- 期末考试：30%
+
+## 教学安排
+- 理论教学：每周2课时
+- 实验教学：每周2课时
+- 总学时：64课时
+
+## 学习建议
+1. 理解数据库基本概念和原理
+2. 多动手实践，使用SQL语言进行数据操作
+3. 关注数据库技术的最新发展
+4. 参与小组讨论，分享设计思路和方法
+5. 培养数据库思维，从数据管理角度思考问题`,
+    icon: "💾",
+    color: "from-indigo-600 to-blue-400"
   }
 ];
 
@@ -240,13 +611,13 @@ export default function CourseDetail() {
 
   if (!course) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gray-900 text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold text-gray-900">课程不存在</h1>
-          <p className="mt-4 text-gray-600">请检查课程ID是否正确。</p>
+          <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">课程不存在</h1>
+          <p className="mt-4 text-gray-400">请检查课程ID是否正确。</p>
           <Link 
             to="/" 
-            className="mt-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="mt-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
           >
             返回首页
           </Link>
@@ -256,20 +627,20 @@ export default function CourseDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900 text-gray-100">
       {/* 导航栏 */}
-      <nav className="bg-white shadow">
+      <nav className="bg-gray-800 border-b border-purple-900 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link to="/" className="text-xl font-bold text-blue-600">
+              <Link to="/" className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
                 邓菲的个人学习页面
               </Link>
             </div>
             <div className="flex items-center">
               <Link 
                 to="/" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-200"
               >
                 首页
               </Link>
@@ -280,41 +651,36 @@ export default function CourseDetail() {
 
       {/* 课程详情 */}
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="bg-white overflow-hidden shadow rounded-lg">
-          <div className="px-4 py-5 sm:px-6 bg-blue-600 text-white">
+        <div className="bg-gray-800 border border-gray-700 overflow-hidden shadow-lg rounded-lg">
+          <div className={`px-4 py-5 sm:px-6 bg-gradient-to-r ${course.color}`}>
             <div className="flex items-center">
               <span className="text-3xl mr-3">{course.icon}</span>
-              <h1 className="text-2xl font-bold">{course.name}</h1>
+              <h1 className="text-2xl font-bold text-white">{course.name}</h1>
             </div>
           </div>
-          <div className="border-t border-gray-200">
+          <div className="border-t border-gray-700">
             <div className="px-4 py-5 sm:p-6">
-              <h2 className="text-lg font-medium text-gray-900 mb-4">课程描述</h2>
-              <p className="text-gray-600 mb-6">{course.description}</p>
-              <h2 className="text-lg font-medium text-gray-900 mb-4">课程内容</h2>
-              <div className="bg-gray-50 p-6 rounded-md shadow-sm">
-                <div className="prose max-w-none">
+              <h2 className="text-lg font-medium text-gray-300 mb-4">课程描述</h2>
+              <p className="text-gray-400 mb-6">{course.description}</p>
+              <h2 className="text-lg font-medium text-gray-300 mb-4">课程内容</h2>
+              <div className="bg-gray-900 border border-gray-700 p-6 rounded-md shadow-sm">
+                <div className="prose prose-invert max-w-none">
                   {course.content.split('\n').map((line, index) => {
                     if (line.startsWith('## ')) {
-                      return <h2 key={index} className="text-xl font-bold text-blue-700 mt-8 mb-4">{line.replace('## ', '')}</h2>;
+                      return <h2 key={index} className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500 mt-8 mb-4">{line.replace('## ', '')}</h2>;
                     } else if (line.startsWith('### ')) {
-                      return <h3 key={index} className="text-lg font-semibold text-gray-800 mt-6 mb-3">{line.replace('### ', '')}</h3>;
+                      return <h3 key={index} className="text-lg font-semibold text-purple-300 mt-6 mb-3">{line.replace('### ', '')}</h3>;
                     } else if (line.startsWith('- ')) {
-                      return <p key={index} className="ml-4 mb-2"><span className="text-blue-500 mr-2">•</span>{line.replace('- ', '')}</p>;
+                      return <p key={index} className="ml-4 mb-2"><span className="text-purple-400 mr-2">•</span>{line.replace('- ', '')}</p>;
                     } else if (line.startsWith('  - ')) {
-                      return <p key={index} className="ml-8 mb-2"><span className="text-gray-500 mr-2">→</span>{line.replace('  - ', '')}</p>;
+                      return <p key={index} className="ml-8 mb-2"><span className="text-pink-400 mr-2">→</span>{line.replace('  - ', '')}</p>;
                     } else if (line) {
-                      return <p key={index} className="mb-4">{line}</p>;
+                      return <p key={index} className="mb-4 text-gray-300">{line}</p>;
                     } else {
                       return <br key={index} />;
                     }
                   })}
                 </div>
-                {course.id !== 'data-analysis' && (
-                  <div className="mt-6 text-yellow-500">
-                    <p>📝 内容正在补充中...</p>
-                  </div>
-                )}
               </div>
             </div>
           </div>
@@ -322,12 +688,22 @@ export default function CourseDetail() {
         <div className="mt-8">
           <Link 
             to="/" 
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
           >
             ← 返回课程列表
           </Link>
         </div>
       </div>
+
+      {/* 页脚 */}
+      <footer className="bg-gray-900 border-t border-gray-800 py-8 mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-gray-500 text-sm">
+            <p>© 2026 邓菲的个人学习页面 | 广东科学技术职业学院</p>
+            <p className="mt-2">商务数据分析与应用专业</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
